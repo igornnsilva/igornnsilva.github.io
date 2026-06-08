@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Igor Nascimento Silva | Desenvolvedor Full Stack</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+    --primary:#2563EB;
+    --secondary:#1E293B;
+    --dark:#0F172A;
+    --light:#F8FAFC;
+    --text:#CBD5E1;
+    --border:#334155;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Montserrat',sans-serif;
+    background:var(--dark);
+    color:white;
+    line-height:1.7;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+section{
+    padding:100px 0;
+}
+
+h1,h2,h3{
+    font-weight:700;
+}
+
+h2{
+    font-size:2rem;
+    margin-bottom:40px;
+    color:white;
+}
+
+p{
+    color:var(--text);
+}
+
+.navbar{
+    position:fixed;
+    width:100%;
+    background:rgba(15,23,42,0.95);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--border);
+    z-index:1000;
+}
+
+.nav-container{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 0;
+}
+
+.logo{
+    font-size:1.2rem;
+    font-weight:700;
+}
+
+.logo span{
+    color:var(--primary);
+}
+
+.nav-links{
+    display:flex;
+    gap:30px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:white;
+    font-weight:500;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:var(--primary);
+}
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+}
+
+.hero-content{
+    max-width:800px;
+}
+
+.hero h1{
+    font-size:4rem;
+    line-height:1.1;
+    margin-bottom:20px;
+}
+
+.hero span{
+    color:var(--primary);
+}
+
+.hero p{
+    font-size:1.1rem;
+    max-width:700px;
+    margin-bottom:35px;
+}
+
+.btn{
+    display:inline-block;
+    background:var(--primary);
+    color:white;
+    text-decoration:none;
+    padding:14px 28px;
+    border-radius:6px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:translateY(-2px);
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:var(--secondary);
+    padding:30px;
+    border:1px solid var(--border);
+    border-radius:6px;
+}
+
+.card h3{
+    margin-bottom:15px;
+    color:white;
+}
+
+.skills{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+}
+
+.skill{
+    background:#172554;
+    color:#93C5FD;
+    padding:10px 16px;
+    border-radius:6px;
+    font-size:.9rem;
+    font-weight:600;
+}
+
+.timeline{
+    display:flex;
+    flex-direction:column;
+    gap:25px;
+}
+
+.project{
+    background:var(--secondary);
+    border:1px solid var(--border);
+    border-radius:6px;
+    padding:30px;
+}
+
+.project a{
+    color:#60A5FA;
+    text-decoration:none;
+    font-weight:600;
+}
+
+.project a:hover{
+    text-decoration:underline;
+}
+
+.contact{
+    text-align:center;
+}
+
+.contact a{
+    color:#60A5FA;
+    text-decoration:none;
+}
+
+footer{
+    border-top:1px solid var(--border);
+    text-align:center;
+    padding:30px;
+    color:#94A3B8;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:2.7rem;
+}
+
+.nav-links{
+    display:none;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav class="navbar">
+    <div class="container nav-container">
+        <div class="logo">Igor<span>.</span></div>
+
+        <div class="nav-links">
+            <a href="#sobre">Sobre</a>
+            <a href="#skills">Competências</a>
+            <a href="#experiencia">Experiência</a>
+            <a href="#projetos">Projetos</a>
+            <a href="#contato">Contato</a>
+        </div>
+    </div>
+</nav>
+
+<section class="hero">
+    <div class="container hero-content">
+
+        <h1>Igor Nascimento Silva<br>
+        <span>Desenvolvedor Full Stack</span></h1>
+
+        <p>
+            Estudante de Ciência da Computação pela Universidade Federal de Viçosa,
+            com foco em desenvolvimento de software, engenharia de sistemas
+            e construção de soluções escaláveis.
+        </p>
+
+        <a href="#projetos" class="btn">Ver Projetos</a>
+
+    </div>
+</section>
+
+<section id="sobre">
+    <div class="container">
+
+        <h2>Sobre Mim</h2>
+
+        <div class="card">
+
+            <p>
+                Sou estudante de Ciência da Computação com interesse em desenvolvimento de software,
+                engenharia de sistemas e pesquisa aplicada. Ao longo da graduação, participei de
+                atividades de monitoria, iniciação científica e produção acadêmica, desenvolvendo
+                habilidades analíticas, de resolução de problemas e trabalho em equipe.
+            </p>
+
+            <br>
+
+            <p>
+                Tenho experiência com tecnologias voltadas ao desenvolvimento web e busco
+                constantemente aprimorar meus conhecimentos por meio de projetos práticos e estudos
+                contínuos. Meu objetivo é criar soluções que aliem qualidade técnica, inovação e
+                impacto real para usuários e organizações.
+            </p>
+
+        </div>
+
+    </div>
+</section>
+
+<section id="skills">
+    <div class="container">
+
+        <h2>Competências Técnicas</h2>
+
+        <div class="skills">
+
+            <div class="skill">Java</div>
+            <div class="skill">Spring Boot</div>
+            <div class="skill">React</div>
+            <div class="skill">JavaScript</div>
+            <div class="skill">Node.js</div>
+            <div class="skill">Python</div>
+            <div class="skill">PostgreSQL</div>
+            <div class="skill">MySQL</div>
+            <div class="skill">Git</div>
+            <div class="skill">GitHub</div>
+            <div class="skill">Linux</div>
+            <div class="skill">SQL</div>
+            <div class="skill">REST APIs</div>
+            <div class="skill">Scrum</div>
+            <div class="skill">Kanban</div>
+
+        </div>
+
+    </div>
+</section>
+
+<section id="experiencia">
+    <div class="container">
+
+        <h2>Experiência</h2>
+
+        <div class="timeline">
+
+            <div class="card">
+                <h3>Desenvolvedor Full Stack — Projeto Integrador (UFV)</h3>
+                <p>
+                    Desenvolvimento de aplicação educacional, construção de APIs,
+                    integração entre front-end e back-end, modelagem de dados,
+                    versionamento com Git e colaboração em equipe.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Estagiário de Product Owner — R2DA</h3>
+                <p>
+                    Atuação próxima ao time de desenvolvimento, validação de funcionalidades,
+                    testes, homologações e participação em processos ágeis.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<section id="projetos">
+    <div class="container">
+
+        <h2>Projetos</h2>
+
+        <div class="grid">
+
+            <div class="project">
+                <h3>Projeto 1</h3>
+                <p>Descrição do projeto.</p>
+                <br>
+                <a href="#" target="_blank">Acessar Projeto</a>
+            </div>
+
+            <div class="project">
+                <h3>Projeto 2</h3>
+                <p>Descrição do projeto.</p>
+                <br>
+                <a href="#" target="_blank">Acessar Projeto</a>
+            </div>
+
+            <div class="project">
+                <h3>Projeto 3</h3>
+                <p>Descrição do projeto.</p>
+                <br>
+                <a href="#" target="_blank">Acessar Projeto</a>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<section id="contato">
+    <div class="container contact">
+
+        <h2>Contato</h2>
+
+        <p>Email: igor.n.silva@ufv.br</p>
+
+        <p>
+            LinkedIn:
+            <a href="https://linkedin.com/in/igornnss" target="_blank">
+                linkedin.com/in/igornnss
+            </a>
+        </p>
+
+        <p>
+            GitHub:
+            <a href="https://github.com/igornnsilva" target="_blank">
+                github.com/igornnsilva
+            </a>
+        </p>
+
+    </div>
+</section>
+
+<footer>
+    © 2026 Igor Nascimento Silva • Desenvolvedor Full Stack
+</footer>
+
+</body>
+</html>
